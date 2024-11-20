@@ -1,0 +1,478 @@
+Open5GS daemon v2.7.2-76-gce36143
+
+11/20 10:54:59.167: [app] INFO: Configuration: '/home/joseph/Desktop/open5gs/install/etc/open5gs/nrf.yaml' (../lib/app/ogs-init.c:144)
+11/20 10:54:59.167: [app] INFO: File Logging: '/home/joseph/Desktop/open5gs/install/var/log/open5gs/nrf.log' (../lib/app/ogs-init.c:147)
+11/20 10:54:59.167: [app] INFO: LOG-LEVEL: 'trace' (../lib/app/ogs-init.c:150)
+11/20 10:54:59.169: [sock] DEBUG: addr:127.0.0.200, port:7777 (../lib/core/ogs-sockaddr.c:143)
+11/20 10:54:59.169: [sbi] INFO: NF Service [nnrf-nfm] (../lib/sbi/context.c:1833)
+11/20 10:54:59.169: [sbi] INFO: NF Service [nnrf-disc] (../lib/sbi/context.c:1833)
+11/20 10:54:59.169: [sock] DEBUG: socket create(2:1:6) (../lib/core/ogs-socket.c:97)
+11/20 10:54:59.169: [sock] DEBUG: Turn on TCP_NODELAY (../lib/core/ogs-sockopt.c:139)
+11/20 10:54:59.169: [sock] DEBUG: Turn on SO_REUSEADDR (../lib/core/ogs-sockopt.c:120)
+11/20 10:54:59.169: [sock] DEBUG: socket bind 127.0.0.200:7777 (../lib/core/ogs-socket.c:122)
+11/20 10:54:59.169: [sock] DEBUG: tcp_server() [127.0.0.200]:7777 (../lib/core/ogs-tcp.c:60)
+11/20 10:54:59.169: [sbi] INFO: nghttp2_server() [http://127.0.0.200]:7777 (../lib/sbi/nghttp2-server.c:424)
+11/20 10:54:59.170: [thread] DEBUG: [0x6256810a76f0] worker signal (../lib/core/ogs-thread.c:66)
+11/20 10:54:59.170: [nrf] DEBUG: nrf_state_initial(): INIT (../src/nrf/nrf-sm.c:25)
+11/20 10:54:59.170: [nrf] DEBUG: nrf_state_operational(): ENTRY (../src/nrf/nrf-sm.c:53)
+11/20 10:54:59.170: [thread] DEBUG: [0x6256810a76f0] thread started (../lib/core/ogs-thread.c:104)
+11/20 10:54:59.170: [app] INFO: NRF initialize...done (../src/nrf/app.c:31)
+11/20 10:55:01.662: [sbi] DEBUG: FLAGS(0x0) [NO-ACK] (../lib/sbi/nghttp2-server.c:1202)
+11/20 10:55:01.662: [sbi] DEBUG: MAX_CONCURRENT_STREAMS = 100 (../lib/sbi/nghttp2-server.c:1213)
+11/20 10:55:01.662: [sbi] DEBUG: ENABLE_PUSH = false (../lib/sbi/nghttp2-server.c:1215)
+11/20 10:55:01.662: [sbi] DEBUG: STREAM added [1] (../lib/sbi/nghttp2-server.c:1558)
+11/20 10:55:01.662: [sbi] DEBUG: [PUT] /nnrf-nfm/v1/nf-instances/2edafec2-a760-41ef-8934-0fa5e1c9fa27 (../lib/sbi/nghttp2-server.c:1173)
+11/20 10:55:01.662: [sbi] DEBUG: RECEIVED: 790 (../lib/sbi/nghttp2-server.c:1177)
+11/20 10:55:01.662: [sbi] DEBUG: {"nfInstanceId":"2edafec2-a760-41ef-8934-0fa5e1c9fa27","nfType":"AMF","nfStatus":"REGISTERED","ipv4Addresses":["127.0.0.10"],"allowedNfTypes":["SCP","SMF","AMF"],"priority":0,"capacity":100,"load":0,"amfInfo":{"amfSetId":"001","amfRegionId":"02","guamiList":[{"plmnId":{"mcc":"999","mnc":"70"},"amfId":"020040"}],"taiList":[{"plmnId":{"mcc":"999","mnc":"70"},"tac":"000001"}]},"nfServiceList":{"2edb65ec-a760-41ef-8934-0fa5e1c9fa27":{"serviceInstanceId":"2edb65ec-a760-41ef-8934-0fa5e1c9fa27","serviceName":"namf-comm","versions":[{"apiVersionInUri":"v1","apiFullVersion":"1.0.0"}],"scheme":"http","nfServiceStatus":"REGISTERED","ipEndPoints":[{"ipv4Address":"127.0.0.10","port":7777}],"allowedNfTypes":["SMF","AMF"],"priority":0,"capacity":100,"load":0}},"nfProfileChangesSupportInd":true} (../lib/sbi/nghttp2-server.c:1179)
+0000: 00000604 00000000 00000300 004000     .............@.
+11/20 10:55:01.662: [nrf] DEBUG: nrf_state_operational(): OGS_EVENT_NAME_SBI_SERVER (../src/nrf/nrf-sm.c:53)
+{"nfInstanceId":"2edafec2-a760-41ef-8934-0fa5e1c9fa27","nfType":"AMF","nfStatus":"REGISTERED","ipv4Addresses":["127.0.0.10"],"allowedNfTypes":["SCP","SMF","AMF"],"priority":0,"capacity":100,"load":0,"amfInfo":{"amfSetId":"001","amfRegionId":"02","guamiList":[{"plmnId":{"mcc":"999","mnc":"70"},"amfId":"020040"}],"taiList":[{"plmnId":{"mcc":"999","mnc":"70"},"tac":"000001"}]},"nfServiceList":{"2edb65ec-a760-41ef-8934-0fa5e1c9fa27":{"serviceInstanceId":"2edb65ec-a760-41ef-8934-0fa5e1c9fa27","serviceName":"namf-comm","versions":[{"apiVersionInUri":"v1","apiFullVersion":"1.0.0"}],"scheme":"http","nfServiceStatus":"REGISTERED","ipEndPoints":[{"ipv4Address":"127.0.0.10","port":7777}],"allowedNfTypes":["SMF","AMF"],"priority":0,"capacity":100,"load":0}},"nfProfileChangesSupportInd":true}11/20 10:55:01.662: [sbi] DEBUG: [NULL] NFInstance added with Ref [(null)] (../lib/sbi/context.c:1101)
+11/20 10:55:01.662: [nrf] DEBUG: nrf_nf_state_initial(): ENTRY (../src/nrf/nf-sm.c:55)
+11/20 10:55:01.662: [nrf] DEBUG: nrf_nf_state_will_register(): ENTRY (../src/nrf/nf-sm.c:94)
+11/20 10:55:01.662: [nrf] DEBUG: nrf_nf_state_will_register(): OGS_EVENT_NAME_SBI_SERVER (../src/nrf/nf-sm.c:94)
+11/20 10:55:01.662: [sock] DEBUG: addr:127.0.0.10, port:80 (../lib/core/ogs-sockaddr.c:143)
+11/20 10:55:01.662: [sock] DEBUG: addr:127.0.0.10, port:7777 (../lib/core/ogs-sockaddr.c:143)
+11/20 10:55:01.662: [sbi] DEBUG: nf_instance_find_client: ogs_sbi_client_add() (../lib/sbi/context.c:1895)
+11/20 10:55:01.662: [sbi] DEBUG: ogs_sbi_client_add [http] (../lib/sbi/client.c:133)
+11/20 10:55:01.662: [sbi] DEBUG: [REF] 1 (../lib/sbi/client.c:134)
+11/20 10:55:01.662: [sbi] DEBUG: CLEINT added with Ref [1] (../lib/sbi/client.c:167)
+11/20 10:55:01.662: [sbi] DEBUG: [AMF] NFInstance associated [2edafec2-a760-41ef-8934-0fa5e1c9fa27] (../lib/sbi/context.c:2194)
+11/20 10:55:01.662: [sbi] DEBUG: [REF] 2 (../lib/sbi/context.c:2199)
+11/20 10:55:01.662: [sbi] DEBUG: CLIENT Ref [2] (../lib/sbi/context.c:2199)
+11/20 10:55:01.662: [sbi] INFO: NF EndPoint(addr) setup [127.0.0.10:80] (../lib/sbi/context.c:2199)
+11/20 10:55:01.662: [sbi] DEBUG: nf_service_associate_client: ogs_sbi_client_add() (../lib/sbi/context.c:1925)
+11/20 10:55:01.662: [sbi] DEBUG: ogs_sbi_client_add [http] (../lib/sbi/client.c:133)
+11/20 10:55:01.662: [sbi] DEBUG: [REF] 1 (../lib/sbi/client.c:134)
+11/20 10:55:01.662: [sbi] DEBUG: CLEINT added with Ref [1] (../lib/sbi/client.c:167)
+11/20 10:55:01.662: [sbi] DEBUG: [namf-comm] NFService associated [2edb65ec-a760-41ef-8934-0fa5e1c9fa27] (../lib/sbi/context.c:1935)
+11/20 10:55:01.662: [sbi] DEBUG: [REF] 2 (../lib/sbi/context.c:1938)
+11/20 10:55:01.662: [sbi] DEBUG: CLIENT Ref [2] (../lib/sbi/context.c:1938)
+11/20 10:55:01.662: [sbi] INFO: NF EndPoint(addr) setup [127.0.0.10:7777] (../lib/sbi/context.c:1938)
+{"nfInstanceId":"2edafec2-a760-41ef-8934-0fa5e1c9fa27","nfType":"AMF","nfStatus":"REGISTERED","heartBeatTimer":10,"plmnList":[{"mcc":"999","mnc":"70"}],"nfProfileChangesInd":true}11/20 10:55:01.663: [sbi] DEBUG: STATUS [201] (../lib/sbi/nghttp2-server.c:645)
+11/20 10:55:01.663: [sbi] DEBUG: SENDING...: 179 (../lib/sbi/nghttp2-server.c:653)
+11/20 10:55:01.663: [sbi] DEBUG: {"nfInstanceId":"2edafec2-a760-41ef-8934-0fa5e1c9fa27","nfType":"AMF","nfStatus":"REGISTERED","heartBeatTimer":10,"plmnList":[{"mcc":"999","mnc":"70"}],"nfProfileChangesInd":true} (../lib/sbi/nghttp2-server.c:654)
+11/20 10:55:01.663: [sbi] DEBUG: STREAM closed [1] (../lib/sbi/nghttp2-server.c:1284)
+11/20 10:55:01.663: [nrf] DEBUG: nrf_nf_state_will_register(): EXIT (../src/nrf/nf-sm.c:94)
+11/20 10:55:01.663: [nrf] DEBUG: nrf_nf_state_registered(): ENTRY (../src/nrf/nf-sm.c:195)
+11/20 10:55:01.663: [nrf] INFO: [2edafec2-a760-41ef-8934-0fa5e1c9fa27] NF registered [Heartbeat:10s] (../src/nrf/nf-sm.c:202)
+11/20 10:55:01.663: [sbi] DEBUG: FLAGS(0x1) [ACK] (../lib/sbi/nghttp2-server.c:1202)
+0000: 00000004 01000000 00                  .........
+0000: 00007401 04000000 01488210 037694d5   ..t......H...v..
+0010: 596a6f16 e53b8977 5712ceb8 b4c42b2e   Yjo..;.wW.....+.
+0020: 05a67f61 96e4593e 941014d2 7eea0802   ...a..Y>....~...
+0030: 6940b971 b6ee002a 62d1bf0f 0d033137   i@.q...*b.....17
+0040: 390f1fac 62aaac95 6aa5a58e e162a956   9...b...j....b.V
+0050: 354848ea 2150c08b 20e52904 b0dd700b   5HH.!P.. .)...p.
+0060: 3412cab3 cfb2d2c0 946d9424 7e5189df   4........m.$~Q..
+0070: 5f8b1d75 d0620d26 3d4c7441 ea         _..u.b.&=LtA.
+0000: 0000b300 01000000 017b226e 66496e73   .........{"nfIns
+0010: 74616e63 65496422 3a223265 64616665   tanceId":"2edafe
+0020: 63322d61 3736302d 34316566 2d383933   c2-a760-41ef-893
+0030: 342d3066 61356531 63396661 3237222c   4-0fa5e1c9fa27",
+0040: 226e6654 79706522 3a22414d 46222c22   "nfType":"AMF","
+0050: 6e665374 61747573 223a2252 45474953   nfStatus":"REGIS
+0060: 54455245 44222c22 68656172 74426561   TERED","heartBea
+0070: 7454696d 6572223a 31302c22 706c6d6e   tTimer":10,"plmn
+0080: 4c697374 223a5b7b 226d6363 223a2239   List":[{"mcc":"9
+0090: 3939222c 226d6e63 223a2237 30227d5d   99","mnc":"70"}]
+00a0: 2c226e66 50726f66 696c6543 68616e67   ,"nfProfileChang
+00b0: 6573496e 64223a74 7275657d            esInd":true}
+11/20 10:55:01.664: [sbi] DEBUG: STREAM added [3] (../lib/sbi/nghttp2-server.c:1558)
+11/20 10:55:01.664: [sbi] DEBUG: [POST] /nnrf-nfm/v1/subscriptions (../lib/sbi/nghttp2-server.c:1173)
+11/20 10:55:01.664: [sbi] DEBUG: RECEIVED: 211 (../lib/sbi/nghttp2-server.c:1177)
+11/20 10:55:01.664: [sbi] DEBUG: {"nfStatusNotificationUri":"http://127.0.0.10:7777/nnrf-nfm/v1/nf-status-notify","reqNfInstanceId":"2edafec2-a760-41ef-8934-0fa5e1c9fa27","subscrCond":{"nfType":"SEPP"},"reqNfType":"AMF","requesterFeatures":"1"} (../lib/sbi/nghttp2-server.c:1179)
+11/20 10:55:01.664: [sbi] DEBUG: STREAM added [5] (../lib/sbi/nghttp2-server.c:1558)
+11/20 10:55:01.664: [nrf] DEBUG: nrf_state_operational(): OGS_EVENT_NAME_SBI_SERVER (../src/nrf/nrf-sm.c:53)
+{"nfStatusNotificationUri":"http://127.0.0.10:7777/nnrf-nfm/v1/nf-status-notify","reqNfInstanceId":"2edafec2-a760-41ef-8934-0fa5e1c9fa27","subscrCond":{"nfType":"SEPP"},"reqNfType":"AMF","requesterFeatures":"1"}11/20 10:55:01.664: [sock] DEBUG: addr:127.0.0.10, port:7777 (../lib/core/ogs-sockaddr.c:143)
+11/20 10:55:01.664: [nrf] DEBUG: [REF] 3 (../src/nrf/nnrf-handler.c:418)
+11/20 10:55:01.664: [nrf] DEBUG: CLIENT Ref [3] (../src/nrf/nnrf-handler.c:418)
+11/20 10:55:01.664: [nrf] INFO: NF EndPoint(addr) setup [127.0.0.10:7777] (../src/nrf/nnrf-handler.c:418)
+11/20 10:55:01.664: [nrf] INFO: [2edbff52-a760-41ef-8444-07cd1ca0dd9c] Subscription created until 2024-11-21T10:55:01.664416-06:00 [duration:86400000000,validity:86400.000000] (../src/nrf/nnrf-handler.c:446)
+{"nfStatusNotificationUri":"http://127.0.0.10:7777/nnrf-nfm/v1/nf-status-notify","reqNfInstanceId":"2edafec2-a760-41ef-8934-0fa5e1c9fa27","subscrCond":{"nfType":"SEPP"},"subscriptionId":"2edbff52-a760-41ef-8444-07cd1ca0dd9c","validityTime":"2024-11-21T10:55:01.664416-06:00","reqNfType":"AMF","nrfSupportedFeatures":"1"}11/20 10:55:01.664: [sbi] DEBUG: STATUS [201] (../lib/sbi/nghttp2-server.c:645)
+11/20 10:55:01.664: [sbi] DEBUG: SENDING...: 320 (../lib/sbi/nghttp2-server.c:653)
+11/20 10:55:01.664: [sbi] DEBUG: {"nfStatusNotificationUri":"http://127.0.0.10:7777/nnrf-nfm/v1/nf-status-notify","reqNfInstanceId":"2edafec2-a760-41ef-8934-0fa5e1c9fa27","subscrCond":{"nfType":"SEPP"},"subscriptionId":"2edbff52-a760-41ef-8444-07cd1ca0dd9c","validityTime":"2024-11-21T10:55:01.664416-06:00","reqNfType":"AMF","nrfSupportedFeatures":"1"} (../lib/sbi/nghttp2-server.c:654)
+11/20 10:55:01.664: [sbi] DEBUG: STREAM closed [3] (../lib/sbi/nghttp2-server.c:1284)
+11/20 10:55:01.664: [sbi] DEBUG: [POST] /nnrf-nfm/v1/subscriptions (../lib/sbi/nghttp2-server.c:1173)
+11/20 10:55:01.664: [sbi] DEBUG: RECEIVED: 222 (../lib/sbi/nghttp2-server.c:1177)
+11/20 10:55:01.664: [sbi] DEBUG: {"nfStatusNotificationUri":"http://127.0.0.10:7777/nnrf-nfm/v1/nf-status-notify","reqNfInstanceId":"2edafec2-a760-41ef-8934-0fa5e1c9fa27","subscrCond":{"serviceName":"nausf-auth"},"reqNfType":"AMF","requesterFeatures":"1"} (../lib/sbi/nghttp2-server.c:1179)
+11/20 10:55:01.664: [sbi] DEBUG: STREAM added [7] (../lib/sbi/nghttp2-server.c:1558)
+11/20 10:55:01.664: [sbi] DEBUG: [POST] /nnrf-nfm/v1/subscriptions (../lib/sbi/nghttp2-server.c:1173)
+11/20 10:55:01.664: [sbi] DEBUG: RECEIVED: 221 (../lib/sbi/nghttp2-server.c:1177)
+11/20 10:55:01.664: [sbi] DEBUG: {"nfStatusNotificationUri":"http://127.0.0.10:7777/nnrf-nfm/v1/nf-status-notify","reqNfInstanceId":"2edafec2-a760-41ef-8934-0fa5e1c9fa27","subscrCond":{"serviceName":"nudm-uecm"},"reqNfType":"AMF","requesterFeatures":"1"} (../lib/sbi/nghttp2-server.c:1179)
+11/20 10:55:01.664: [sbi] DEBUG: STREAM added [9] (../lib/sbi/nghttp2-server.c:1558)
+11/20 10:55:01.664: [sbi] DEBUG: [POST] /nnrf-nfm/v1/subscriptions (../lib/sbi/nghttp2-server.c:1173)
+11/20 10:55:01.664: [sbi] DEBUG: RECEIVED: 220 (../lib/sbi/nghttp2-server.c:1177)
+11/20 10:55:01.664: [sbi] DEBUG: {"nfStatusNotificationUri":"http://127.0.0.10:7777/nnrf-nfm/v1/nf-status-notify","reqNfInstanceId":"2edafec2-a760-41ef-8934-0fa5e1c9fa27","subscrCond":{"serviceName":"nudm-sdm"},"reqNfType":"AMF","requesterFeatures":"1"} (../lib/sbi/nghttp2-server.c:1179)
+11/20 10:55:01.664: [sbi] DEBUG: STREAM added [11] (../lib/sbi/nghttp2-server.c:1558)
+11/20 10:55:01.664: [sbi] DEBUG: [POST] /nnrf-nfm/v1/subscriptions (../lib/sbi/nghttp2-server.c:1173)
+11/20 10:55:01.664: [sbi] DEBUG: RECEIVED: 234 (../lib/sbi/nghttp2-server.c:1177)
+11/20 10:55:01.664: [sbi] DEBUG: {"nfStatusNotificationUri":"http://127.0.0.10:7777/nnrf-nfm/v1/nf-status-notify","reqNfInstanceId":"2edafec2-a760-41ef-8934-0fa5e1c9fa27","subscrCond":{"serviceName":"npcf-am-policy-control"},"reqNfType":"AMF","requesterFeatures":"1"} (../lib/sbi/nghttp2-server.c:1179)
+11/20 10:55:01.664: [sbi] DEBUG: STREAM added [13] (../lib/sbi/nghttp2-server.c:1558)
+11/20 10:55:01.664: [sbi] DEBUG: [POST] /nnrf-nfm/v1/subscriptions (../lib/sbi/nghttp2-server.c:1173)
+11/20 10:55:01.664: [sbi] DEBUG: RECEIVED: 227 (../lib/sbi/nghttp2-server.c:1177)
+11/20 10:55:01.664: [sbi] DEBUG: {"nfStatusNotificationUri":"http://127.0.0.10:7777/nnrf-nfm/v1/nf-status-notify","reqNfInstanceId":"2edafec2-a760-41ef-8934-0fa5e1c9fa27","subscrCond":{"serviceName":"nsmf-pdusession"},"reqNfType":"AMF","requesterFeatures":"1"} (../lib/sbi/nghttp2-server.c:1179)
+11/20 10:55:01.664: [sbi] DEBUG: STREAM added [15] (../lib/sbi/nghttp2-server.c:1558)
+0000: 00004901 04000000 03c1c0bf 0f0d8264   ..I............d
+0010: 400f1fbd 9d29aee3 0c044eae 05c0b880   @....)....N.....
+0020: 0b8ebaeb ac555592 ad54b4b1 dc2c22d8   .....UU..T...,".
+0030: d04b0d5a 4c7a90c0 8b2472ca d8961bae   .K.ZLz...$r.....
+0040: 01668259 5679a69a 580e9240 90609247   .f.YVy..X..@.`.G
+0050: c9be                                  ..
+11/20 10:55:01.664: [nrf] DEBUG: nrf_state_operational(): OGS_EVENT_NAME_SBI_SERVER (../src/nrf/nrf-sm.c:53)
+{"nfStatusNotificationUri":"http://127.0.0.10:7777/nnrf-nfm/v1/nf-status-notify","reqNfInstanceId":"2edafec2-a760-41ef-8934-0fa5e1c9fa27","subscrCond":{"serviceName":"nausf-auth"},"reqNfType":"AMF","requesterFeatures":"1"}11/20 10:55:01.664: [sock] DEBUG: addr:127.0.0.10, port:7777 (../lib/core/ogs-sockaddr.c:143)
+11/20 10:55:01.664: [nrf] DEBUG: [REF] 4 (../src/nrf/nnrf-handler.c:418)
+11/20 10:55:01.664: [nrf] DEBUG: CLIENT Ref [4] (../src/nrf/nnrf-handler.c:418)
+11/20 10:55:01.664: [nrf] INFO: NF EndPoint(addr) setup [127.0.0.10:7777] (../src/nrf/nnrf-handler.c:418)
+11/20 10:55:01.664: [nrf] INFO: [2edc0f10-a760-41ef-8444-07cd1ca0dd9c] Subscription created until 2024-11-21T10:55:01.664767-06:00 [duration:86400000000,validity:86400.000000] (../src/nrf/nnrf-handler.c:446)
+{"nfStatusNotificationUri":"http://127.0.0.10:7777/nnrf-nfm/v1/nf-status-notify","reqNfInstanceId":"2edafec2-a760-41ef-8934-0fa5e1c9fa27","subscrCond":{"serviceName":"nausf-auth"},"subscriptionId":"2edc0f10-a760-41ef-8444-07cd1ca0dd9c","validityTime":"2024-11-21T10:55:01.664767-06:00","reqNfType":"AMF","nrfSupportedFeatures":"1"}11/20 10:55:01.664: [sbi] DEBUG: STATUS [201] (../lib/sbi/nghttp2-server.c:645)
+11/20 10:55:01.664: [sbi] DEBUG: SENDING...: 331 (../lib/sbi/nghttp2-server.c:653)
+11/20 10:55:01.664: [sbi] DEBUG: {"nfStatusNotificationUri":"http://127.0.0.10:7777/nnrf-nfm/v1/nf-status-notify","reqNfInstanceId":"2edafec2-a760-41ef-8934-0fa5e1c9fa27","subscrCond":{"serviceName":"nausf-auth"},"subscriptionId":"2edc0f10-a760-41ef-8444-07cd1ca0dd9c","validityTime":"2024-11-21T10:55:01.664767-06:00","reqNfType":"AMF","nrfSupportedFeatures":"1"} (../lib/sbi/nghttp2-server.c:654)
+11/20 10:55:01.664: [sbi] DEBUG: STREAM closed [5] (../lib/sbi/nghttp2-server.c:1284)
+11/20 10:55:01.664: [nrf] DEBUG: nrf_state_operational(): OGS_EVENT_NAME_SBI_SERVER (../src/nrf/nrf-sm.c:53)
+{"nfStatusNotificationUri":"http://127.0.0.10:7777/nnrf-nfm/v1/nf-status-notify","reqNfInstanceId":"2edafec2-a760-41ef-8934-0fa5e1c9fa27","subscrCond":{"serviceName":"nudm-uecm"},"reqNfType":"AMF","requesterFeatures":"1"}11/20 10:55:01.664: [sock] DEBUG: addr:127.0.0.10, port:7777 (../lib/core/ogs-sockaddr.c:143)
+11/20 10:55:01.664: [nrf] DEBUG: [REF] 5 (../src/nrf/nnrf-handler.c:418)
+11/20 10:55:01.664: [nrf] DEBUG: CLIENT Ref [5] (../src/nrf/nnrf-handler.c:418)
+11/20 10:55:01.664: [nrf] INFO: NF EndPoint(addr) setup [127.0.0.10:7777] (../src/nrf/nnrf-handler.c:418)
+11/20 10:55:01.664: [nrf] INFO: [2edc1384-a760-41ef-8444-07cd1ca0dd9c] Subscription created until 2024-11-21T10:55:01.664882-06:00 [duration:86400000000,validity:86400.000000] (../src/nrf/nnrf-handler.c:446)
+{"nfStatusNotificationUri":"http://127.0.0.10:7777/nnrf-nfm/v1/nf-status-notify","reqNfInstanceId":"2edafec2-a760-41ef-8934-0fa5e1c9fa27","subscrCond":{"serviceName":"nudm-uecm"},"subscriptionId":"2edc1384-a760-41ef-8444-07cd1ca0dd9c","validityTime":"2024-11-21T10:55:01.664882-06:00","reqNfType":"AMF","nrfSupportedFeatures":"1"}11/20 10:55:01.664: [sbi] DEBUG: STATUS [201] (../lib/sbi/nghttp2-server.c:645)
+11/20 10:55:01.664: [sbi] DEBUG: SENDING...: 330 (../lib/sbi/nghttp2-server.c:653)
+11/20 10:55:01.664: [sbi] DEBUG: {"nfStatusNotificationUri":"http://127.0.0.10:7777/nnrf-nfm/v1/nf-status-notify","reqNfInstanceId":"2edafec2-a760-41ef-8934-0fa5e1c9fa27","subscrCond":{"serviceName":"nudm-uecm"},"subscriptionId":"2edc1384-a760-41ef-8444-07cd1ca0dd9c","validityTime":"2024-11-21T10:55:01.664882-06:00","reqNfType":"AMF","nrfSupportedFeatures":"1"} (../lib/sbi/nghttp2-server.c:654)
+11/20 10:55:01.664: [sbi] DEBUG: STREAM closed [7] (../lib/sbi/nghttp2-server.c:1284)
+11/20 10:55:01.664: [nrf] DEBUG: nrf_state_operational(): OGS_EVENT_NAME_SBI_SERVER (../src/nrf/nrf-sm.c:53)
+{"nfStatusNotificationUri":"http://127.0.0.10:7777/nnrf-nfm/v1/nf-status-notify","reqNfInstanceId":"2edafec2-a760-41ef-8934-0fa5e1c9fa27","subscrCond":{"serviceName":"nudm-sdm"},"reqNfType":"AMF","requesterFeatures":"1"}11/20 10:55:01.664: [sock] DEBUG: addr:127.0.0.10, port:7777 (../lib/core/ogs-sockaddr.c:143)
+11/20 10:55:01.664: [nrf] DEBUG: [REF] 6 (../src/nrf/nnrf-handler.c:418)
+11/20 10:55:01.664: [nrf] DEBUG: CLIENT Ref [6] (../src/nrf/nnrf-handler.c:418)
+11/20 10:55:01.664: [nrf] INFO: NF EndPoint(addr) setup [127.0.0.10:7777] (../src/nrf/nnrf-handler.c:418)
+11/20 10:55:01.664: [nrf] INFO: [2edc1758-a760-41ef-8444-07cd1ca0dd9c] Subscription created until 2024-11-21T10:55:01.664976-06:00 [duration:86400000000,validity:86400.000000] (../src/nrf/nnrf-handler.c:446)
+{"nfStatusNotificationUri":"http://127.0.0.10:7777/nnrf-nfm/v1/nf-status-notify","reqNfInstanceId":"2edafec2-a760-41ef-8934-0fa5e1c9fa27","subscrCond":{"serviceName":"nudm-sdm"},"subscriptionId":"2edc1758-a760-41ef-8444-07cd1ca0dd9c","validityTime":"2024-11-21T10:55:01.664976-06:00","reqNfType":"AMF","nrfSupportedFeatures":"1"}11/20 10:55:01.664: [sbi] DEBUG: STATUS [201] (../lib/sbi/nghttp2-server.c:645)
+11/20 10:55:01.664: [sbi] DEBUG: SENDING...: 329 (../lib/sbi/nghttp2-server.c:653)
+11/20 10:55:01.665: [sbi] DEBUG: {"nfStatusNotificationUri":"http://127.0.0.10:7777/nnrf-nfm/v1/nf-status-notify","reqNfInstanceId":"2edafec2-a760-41ef-8934-0fa5e1c9fa27","subscrCond":{"serviceName":"nudm-sdm"},"subscriptionId":"2edc1758-a760-41ef-8444-07cd1ca0dd9c","validityTime":"2024-11-21T10:55:01.664976-06:00","reqNfType":"AMF","nrfSupportedFeatures":"1"} (../lib/sbi/nghttp2-server.c:654)
+11/20 10:55:01.665: [sbi] DEBUG: STREAM closed [9] (../lib/sbi/nghttp2-server.c:1284)
+11/20 10:55:01.665: [nrf] DEBUG: nrf_state_operational(): OGS_EVENT_NAME_SBI_SERVER (../src/nrf/nrf-sm.c:53)
+{"nfStatusNotificationUri":"http://127.0.0.10:7777/nnrf-nfm/v1/nf-status-notify","reqNfInstanceId":"2edafec2-a760-41ef-8934-0fa5e1c9fa27","subscrCond":{"serviceName":"npcf-am-policy-control"},"reqNfType":"AMF","requesterFeatures":"1"}11/20 10:55:01.665: [sock] DEBUG: addr:127.0.0.10, port:7777 (../lib/core/ogs-sockaddr.c:143)
+11/20 10:55:01.665: [nrf] DEBUG: [REF] 7 (../src/nrf/nnrf-handler.c:418)
+11/20 10:55:01.665: [nrf] DEBUG: CLIENT Ref [7] (../src/nrf/nnrf-handler.c:418)
+11/20 10:55:01.665: [nrf] INFO: NF EndPoint(addr) setup [127.0.0.10:7777] (../src/nrf/nnrf-handler.c:418)
+11/20 10:55:01.665: [nrf] INFO: [2edc1b0e-a760-41ef-8444-07cd1ca0dd9c] Subscription created until 2024-11-21T10:55:01.665210-06:00 [duration:86400000000,validity:86400.000000] (../src/nrf/nnrf-handler.c:446)
+{"nfStatusNotificationUri":"http://127.0.0.10:7777/nnrf-nfm/v1/nf-status-notify","reqNfInstanceId":"2edafec2-a760-41ef-8934-0fa5e1c9fa27","subscrCond":{"serviceName":"npcf-am-policy-control"},"subscriptionId":"2edc1b0e-a760-41ef-8444-07cd1ca0dd9c","validityTime":"2024-11-21T10:55:01.665210-06:00","reqNfType":"AMF","nrfSupportedFeatures":"1"}11/20 10:55:01.665: [sbi] DEBUG: STATUS [201] (../lib/sbi/nghttp2-server.c:645)
+11/20 10:55:01.665: [sbi] DEBUG: SENDING...: 343 (../lib/sbi/nghttp2-server.c:653)
+11/20 10:55:01.665: [sbi] DEBUG: {"nfStatusNotificationUri":"http://127.0.0.10:7777/nnrf-nfm/v1/nf-status-notify","reqNfInstanceId":"2edafec2-a760-41ef-8934-0fa5e1c9fa27","subscrCond":{"serviceName":"npcf-am-policy-control"},"subscriptionId":"2edc1b0e-a760-41ef-8444-07cd1ca0dd9c","validityTime":"2024-11-21T10:55:01.665210-06:00","reqNfType":"AMF","nrfSupportedFeatures":"1"} (../lib/sbi/nghttp2-server.c:654)
+11/20 10:55:01.665: [sbi] DEBUG: STREAM closed [11] (../lib/sbi/nghttp2-server.c:1284)
+11/20 10:55:01.665: [nrf] DEBUG: nrf_state_operational(): OGS_EVENT_NAME_SBI_SERVER (../src/nrf/nrf-sm.c:53)
+{"nfStatusNotificationUri":"http://127.0.0.10:7777/nnrf-nfm/v1/nf-status-notify","reqNfInstanceId":"2edafec2-a760-41ef-8934-0fa5e1c9fa27","subscrCond":{"serviceName":"nsmf-pdusession"},"reqNfType":"AMF","requesterFeatures":"1"}11/20 10:55:01.665: [sock] DEBUG: addr:127.0.0.10, port:7777 (../lib/core/ogs-sockaddr.c:143)
+11/20 10:55:01.665: [nrf] DEBUG: [REF] 8 (../src/nrf/nnrf-handler.c:418)
+11/20 10:55:01.665: [nrf] DEBUG: CLIENT Ref [8] (../src/nrf/nnrf-handler.c:418)
+11/20 10:55:01.665: [nrf] INFO: NF EndPoint(addr) setup [127.0.0.10:7777] (../src/nrf/nnrf-handler.c:418)
+11/20 10:55:01.665: [nrf] INFO: [2edc252c-a760-41ef-8444-07cd1ca0dd9c] Subscription created until 2024-11-21T10:55:01.665373-06:00 [duration:86400000000,validity:86400.000000] (../src/nrf/nnrf-handler.c:446)
+{"nfStatusNotificationUri":"http://127.0.0.10:7777/nnrf-nfm/v1/nf-status-notify","reqNfInstanceId":"2edafec2-a760-41ef-8934-0fa5e1c9fa27","subscrCond":{"serviceName":"nsmf-pdusession"},"subscriptionId":"2edc252c-a760-41ef-8444-07cd1ca0dd9c","validityTime":"2024-11-21T10:55:01.665373-06:00","reqNfType":"AMF","nrfSupportedFeatures":"1"}11/20 10:55:01.665: [sbi] DEBUG: STATUS [201] (../lib/sbi/nghttp2-server.c:645)
+11/20 10:55:01.665: [sbi] DEBUG: SENDING...: 336 (../lib/sbi/nghttp2-server.c:653)
+11/20 10:55:01.665: [sbi] DEBUG: {"nfStatusNotificationUri":"http://127.0.0.10:7777/nnrf-nfm/v1/nf-status-notify","reqNfInstanceId":"2edafec2-a760-41ef-8934-0fa5e1c9fa27","subscrCond":{"serviceName":"nsmf-pdusession"},"subscriptionId":"2edc252c-a760-41ef-8444-07cd1ca0dd9c","validityTime":"2024-11-21T10:55:01.665373-06:00","reqNfType":"AMF","nrfSupportedFeatures":"1"} (../lib/sbi/nghttp2-server.c:654)
+11/20 10:55:01.665: [sbi] DEBUG: STREAM closed [13] (../lib/sbi/nghttp2-server.c:1284)
+11/20 10:55:01.665: [sbi] DEBUG: [POST] /nnrf-nfm/v1/subscriptions (../lib/sbi/nghttp2-server.c:1173)
+11/20 10:55:01.665: [sbi] DEBUG: RECEIVED: 229 (../lib/sbi/nghttp2-server.c:1177)
+11/20 10:55:01.665: [sbi] DEBUG: {"nfStatusNotificationUri":"http://127.0.0.10:7777/nnrf-nfm/v1/nf-status-notify","reqNfInstanceId":"2edafec2-a760-41ef-8934-0fa5e1c9fa27","subscrCond":{"serviceName":"nnssf-nsselection"},"reqNfType":"AMF","requesterFeatures":"1"} (../lib/sbi/nghttp2-server.c:1179)
+0000: 00014000 01000000 037b226e 66537461   ..@......{"nfSta
+0010: 7475734e 6f746966 69636174 696f6e55   tusNotificationU
+0020: 7269223a 22687474 703a2f2f 3132372e   ri":"http://127.
+0030: 302e302e 31303a37 3737372f 6e6e7266   0.0.10:7777/nnrf
+0040: 2d6e666d 2f76312f 6e662d73 74617475   -nfm/v1/nf-statu
+0050: 732d6e6f 74696679 222c2272 65714e66   s-notify","reqNf
+0060: 496e7374 616e6365 4964223a 22326564   InstanceId":"2ed
+0070: 61666563 322d6137 36302d34 3165662d   afec2-a760-41ef-
+0080: 38393334 2d306661 35653163 39666132   8934-0fa5e1c9fa2
+0090: 37222c22 73756273 6372436f 6e64223a   7","subscrCond":
+00a0: 7b226e66 54797065 223a2253 45505022   {"nfType":"SEPP"
+00b0: 7d2c2273 75627363 72697074 696f6e49   },"subscriptionI
+00c0: 64223a22 32656462 66663532 2d613736   d":"2edbff52-a76
+00d0: 302d3431 65662d38 3434342d 30376364   0-41ef-8444-07cd
+00e0: 31636130 64643963 222c2276 616c6964   1ca0dd9c","valid
+00f0: 69747954 696d6522 3a223230 32342d31   ityTime":"2024-1
+0100: 312d3231 5431303a 35353a30 312e3636   1-21T10:55:01.66
+0110: 34343136 2d30363a 3030222c 22726571   4416-06:00","req
+0120: 4e665479 7065223a 22414d46 222c226e   NfType":"AMF","n
+0130: 72665375 70706f72 74656446 65617475   rfSupportedFeatu
+0140: 72657322 3a223122 7d                  res":"1"}
+11/20 10:55:01.665: [nrf] DEBUG: nrf_state_operational(): OGS_EVENT_NAME_SBI_SERVER (../src/nrf/nrf-sm.c:53)
+{"nfStatusNotificationUri":"http://127.0.0.10:7777/nnrf-nfm/v1/nf-status-notify","reqNfInstanceId":"2edafec2-a760-41ef-8934-0fa5e1c9fa27","subscrCond":{"serviceName":"nnssf-nsselection"},"reqNfType":"AMF","requesterFeatures":"1"}11/20 10:55:01.665: [sock] DEBUG: addr:127.0.0.10, port:7777 (../lib/core/ogs-sockaddr.c:143)
+11/20 10:55:01.665: [nrf] DEBUG: [REF] 9 (../src/nrf/nnrf-handler.c:418)
+11/20 10:55:01.665: [nrf] DEBUG: CLIENT Ref [9] (../src/nrf/nnrf-handler.c:418)
+11/20 10:55:01.665: [nrf] INFO: NF EndPoint(addr) setup [127.0.0.10:7777] (../src/nrf/nnrf-handler.c:418)
+11/20 10:55:01.665: [nrf] INFO: [2edc309e-a760-41ef-8444-07cd1ca0dd9c] Subscription created until 2024-11-21T10:55:01.665625-06:00 [duration:86400000000,validity:86400.000000] (../src/nrf/nnrf-handler.c:446)
+{"nfStatusNotificationUri":"http://127.0.0.10:7777/nnrf-nfm/v1/nf-status-notify","reqNfInstanceId":"2edafec2-a760-41ef-8934-0fa5e1c9fa27","subscrCond":{"serviceName":"nnssf-nsselection"},"subscriptionId":"2edc309e-a760-41ef-8444-07cd1ca0dd9c","validityTime":"2024-11-21T10:55:01.665625-06:00","reqNfType":"AMF","nrfSupportedFeatures":"1"}11/20 10:55:01.665: [sbi] DEBUG: STATUS [201] (../lib/sbi/nghttp2-server.c:645)
+11/20 10:55:01.665: [sbi] DEBUG: SENDING...: 338 (../lib/sbi/nghttp2-server.c:653)
+11/20 10:55:01.665: [sbi] DEBUG: {"nfStatusNotificationUri":"http://127.0.0.10:7777/nnrf-nfm/v1/nf-status-notify","reqNfInstanceId":"2edafec2-a760-41ef-8934-0fa5e1c9fa27","subscrCond":{"serviceName":"nnssf-nsselection"},"subscriptionId":"2edc309e-a760-41ef-8444-07cd1ca0dd9c","validityTime":"2024-11-21T10:55:01.665625-06:00","reqNfType":"AMF","nrfSupportedFeatures":"1"} (../lib/sbi/nghttp2-server.c:654)
+11/20 10:55:01.665: [sbi] DEBUG: STREAM closed [15] (../lib/sbi/nghttp2-server.c:1284)
+0000: 00004a01 04000000 05c1c0bf 0f0d0333   ..J............3
+0010: 33310f1f bd9d29ae e30c044e ae05c0b8   31....)....N....
+0020: 800b8eba ebac5555 92ad54b4 b1dc2c22   ......UU..T...,"
+0030: d8d04b0d 5a4c7a90 c08b2101 2840b0dd   ..K.ZLz...!.(@..
+0040: 700b3412 cab3cd34 d2c07492 04830492   p.4....4..t.....
+0050: 3e4fbe                                >O.
+0000: 00014b00 01000000 057b226e 66537461   ..K......{"nfSta
+0010: 7475734e 6f746966 69636174 696f6e55   tusNotificationU
+0020: 7269223a 22687474 703a2f2f 3132372e   ri":"http://127.
+0030: 302e302e 31303a37 3737372f 6e6e7266   0.0.10:7777/nnrf
+0040: 2d6e666d 2f76312f 6e662d73 74617475   -nfm/v1/nf-statu
+0050: 732d6e6f 74696679 222c2272 65714e66   s-notify","reqNf
+0060: 496e7374 616e6365 4964223a 22326564   InstanceId":"2ed
+0070: 61666563 322d6137 36302d34 3165662d   afec2-a760-41ef-
+0080: 38393334 2d306661 35653163 39666132   8934-0fa5e1c9fa2
+0090: 37222c22 73756273 6372436f 6e64223a   7","subscrCond":
+00a0: 7b227365 72766963 654e616d 65223a22   {"serviceName":"
+00b0: 6e617573 662d6175 7468227d 2c227375   nausf-auth"},"su
+00c0: 62736372 69707469 6f6e4964 223a2232   bscriptionId":"2
+00d0: 65646330 6631302d 61373630 2d343165   edc0f10-a760-41e
+00e0: 662d3834 34342d30 37636431 63613064   f-8444-07cd1ca0d
+00f0: 64396322 2c227661 6c696469 74795469   d9c","validityTi
+0100: 6d65223a 22323032 342d3131 2d323154   me":"2024-11-21T
+0110: 31303a35 353a3031 2e363634 3736372d   10:55:01.664767-
+0120: 30363a30 30222c22 7265714e 66547970   06:00","reqNfTyp
+0130: 65223a22 414d4622 2c226e72 66537570   e":"AMF","nrfSup
+0140: 706f7274 65644665 61747572 6573223a   portedFeatures":
+0150: 2231227d                              "1"}
+0000: 00004a01 04000000 07c1c0bf 0f0d0333   ..J............3
+0010: 33300f1f bd9d29ae e30c044e ae05c0b8   30....)....N....
+0020: 800b8eba ebac5555 92ad54b4 b1dc2c22   ......UU..T...,"
+0030: d8d04b0d 5a4c7a90 c08b2102 cbcd2c37   ..K.ZLz...!...,7
+0040: 5c02cd04 b2acf34d 34b01d24 8120c124   \......M4..$. .$
+0050: 8f93be                                ...
+0000: 00014a00 01000000 077b226e 66537461   ..J......{"nfSta
+0010: 7475734e 6f746966 69636174 696f6e55   tusNotificationU
+0020: 7269223a 22687474 703a2f2f 3132372e   ri":"http://127.
+0030: 302e302e 31303a37 3737372f 6e6e7266   0.0.10:7777/nnrf
+0040: 2d6e666d 2f76312f 6e662d73 74617475   -nfm/v1/nf-statu
+0050: 732d6e6f 74696679 222c2272 65714e66   s-notify","reqNf
+0060: 496e7374 616e6365 4964223a 22326564   InstanceId":"2ed
+0070: 61666563 322d6137 36302d34 3165662d   afec2-a760-41ef-
+0080: 38393334 2d306661 35653163 39666132   8934-0fa5e1c9fa2
+0090: 37222c22 73756273 6372436f 6e64223a   7","subscrCond":
+00a0: 7b227365 72766963 654e616d 65223a22   {"serviceName":"
+00b0: 6e75646d 2d756563 6d227d2c 22737562   nudm-uecm"},"sub
+00c0: 73637269 7074696f 6e496422 3a223265   scriptionId":"2e
+00d0: 64633133 38342d61 3736302d 34316566   dc1384-a760-41ef
+00e0: 2d383434 342d3037 63643163 61306464   -8444-07cd1ca0dd
+00f0: 3963222c 2276616c 69646974 7954696d   9c","validityTim
+0100: 65223a22 32303234 2d31312d 32315431   e":"2024-11-21T1
+0110: 303a3535 3a30312e 36363438 38322d30   0:55:01.664882-0
+0120: 363a3030 222c2272 65714e66 54797065   6:00","reqNfType
+0130: 223a2241 4d46222c 226e7266 53757070   ":"AMF","nrfSupp
+0140: 6f727465 64466561 74757265 73223a22   ortedFeatures":"
+0150: 31227d                                1"}
+0000: 00004a01 04000000 09c1c0bf 0f0d0333   ..J............3
+0010: 32390f1f bd9d29ae e30c044e ae05c0b8   29....)....N....
+0020: 800b8eba ebac5555 92ad54b4 b1dc2c22   ......UU..T...,"
+0030: d8d04b0d 5a4c7a90 c08b2102 eb6f2c37   ..K.ZLz...!..o,7
+0040: 5c02cd04 b2acf34d 34b01d24 8120c124   \......M4..$. .$
+0050: 8f93be                                ...
+0000: 00014900 01000000 097b226e 66537461   ..I......{"nfSta
+0010: 7475734e 6f746966 69636174 696f6e55   tusNotificationU
+0020: 7269223a 22687474 703a2f2f 3132372e   ri":"http://127.
+0030: 302e302e 31303a37 3737372f 6e6e7266   0.0.10:7777/nnrf
+0040: 2d6e666d 2f76312f 6e662d73 74617475   -nfm/v1/nf-statu
+0050: 732d6e6f 74696679 222c2272 65714e66   s-notify","reqNf
+0060: 496e7374 616e6365 4964223a 22326564   InstanceId":"2ed
+0070: 61666563 322d6137 36302d34 3165662d   afec2-a760-41ef-
+0080: 38393334 2d306661 35653163 39666132   8934-0fa5e1c9fa2
+0090: 37222c22 73756273 6372436f 6e64223a   7","subscrCond":
+00a0: 7b227365 72766963 654e616d 65223a22   {"serviceName":"
+00b0: 6e75646d 2d73646d 227d2c22 73756273   nudm-sdm"},"subs
+00c0: 63726970 74696f6e 4964223a 22326564   criptionId":"2ed
+00d0: 63313735 382d6137 36302d34 3165662d   c1758-a760-41ef-
+00e0: 38343434 2d303763 64316361 30646439   8444-07cd1ca0dd9
+00f0: 63222c22 76616c69 64697479 54696d65   c","validityTime
+0100: 223a2232 3032342d 31312d32 31543130   ":"2024-11-21T10
+0110: 3a35353a 30312e36 36343937 362d3036   :55:01.664976-06
+0120: 3a303022 2c227265 714e6654 79706522   :00","reqNfType"
+0130: 3a22414d 46222c22 6e726653 7570706f   :"AMF","nrfSuppo
+0140: 72746564 46656174 75726573 223a2231   rtedFeatures":"1
+0150: 227d                                  "}
+0000: 00004a01 04000000 0bc1c0bf 0f0d0333   ..J............3
+0010: 34330f1f bd9d29ae e30c044e ae05c0b8   43....)....N....
+0020: 800b8eba ebac5555 92ad54b4 b1dc2c22   ......UU..T...,"
+0030: d8d04b0d 5a4c7a90 c08b2103 180ab0dd   ..K.ZLz...!.....
+0040: 700b3412 cab3cd34 d2c07492 04830492   p.4....4..t.....
+0050: 3e4fbe                                >O.
+0000: 00015700 01000000 0b7b226e 66537461   ..W......{"nfSta
+0010: 7475734e 6f746966 69636174 696f6e55   tusNotificationU
+0020: 7269223a 22687474 703a2f2f 3132372e   ri":"http://127.
+0030: 302e302e 31303a37 3737372f 6e6e7266   0.0.10:7777/nnrf
+0040: 2d6e666d 2f76312f 6e662d73 74617475   -nfm/v1/nf-statu
+0050: 732d6e6f 74696679 222c2272 65714e66   s-notify","reqNf
+0060: 496e7374 616e6365 4964223a 22326564   InstanceId":"2ed
+0070: 61666563 322d6137 36302d34 3165662d   afec2-a760-41ef-
+0080: 38393334 2d306661 35653163 39666132   8934-0fa5e1c9fa2
+0090: 37222c22 73756273 6372436f 6e64223a   7","subscrCond":
+00a0: 7b227365 72766963 654e616d 65223a22   {"serviceName":"
+00b0: 6e706366 2d616d2d 706f6c69 63792d63   npcf-am-policy-c
+00c0: 6f6e7472 6f6c227d 2c227375 62736372   ontrol"},"subscr
+00d0: 69707469 6f6e4964 223a2232 65646331   iptionId":"2edc1
+00e0: 6230652d 61373630 2d343165 662d3834   b0e-a760-41ef-84
+00f0: 34342d30 37636431 63613064 64396322   44-07cd1ca0dd9c"
+0100: 2c227661 6c696469 74795469 6d65223a   ,"validityTime":
+0110: 22323032 342d3131 2d323154 31303a35   "2024-11-21T10:5
+0120: 353a3031 2e363635 3231302d 30363a30   5:01.665210-06:0
+0130: 30222c22 7265714e 66547970 65223a22   0","reqNfType":"
+0140: 414d4622 2c226e72 66537570 706f7274   AMF","nrfSupport
+0150: 65644665 61747572 6573223a 2231227d   edFeatures":"1"}
+0000: 00004a01 04000000 0dc1c0bf 0f0d0333   ..J............3
+0010: 33360f1f bd9d29ae e30c044e ae05c0b8   36....)....N....
+0020: 800b8eba ebac5555 92ad54b4 b1dc2c22   ......UU..T...,"
+0030: d8d04b0d 5a4c7a90 c08b2104 d888b0dd   ..K.ZLz...!.....
+0040: 700b3412 cab3cd34 d2c07492 04830492   p.4....4..t.....
+0050: 3e4fbe                                >O.
+0000: 00015000 01000000 0d7b226e 66537461   ..P......{"nfSta
+0010: 7475734e 6f746966 69636174 696f6e55   tusNotificationU
+0020: 7269223a 22687474 703a2f2f 3132372e   ri":"http://127.
+0030: 302e302e 31303a37 3737372f 6e6e7266   0.0.10:7777/nnrf
+0040: 2d6e666d 2f76312f 6e662d73 74617475   -nfm/v1/nf-statu
+0050: 732d6e6f 74696679 222c2272 65714e66   s-notify","reqNf
+0060: 496e7374 616e6365 4964223a 22326564   InstanceId":"2ed
+0070: 61666563 322d6137 36302d34 3165662d   afec2-a760-41ef-
+0080: 38393334 2d306661 35653163 39666132   8934-0fa5e1c9fa2
+0090: 37222c22 73756273 6372436f 6e64223a   7","subscrCond":
+00a0: 7b227365 72766963 654e616d 65223a22   {"serviceName":"
+00b0: 6e736d66 2d706475 73657373 696f6e22   nsmf-pdusession"
+00c0: 7d2c2273 75627363 72697074 696f6e49   },"subscriptionI
+00d0: 64223a22 32656463 32353263 2d613736   d":"2edc252c-a76
+00e0: 302d3431 65662d38 3434342d 30376364   0-41ef-8444-07cd
+00f0: 31636130 64643963 222c2276 616c6964   1ca0dd9c","valid
+0100: 69747954 696d6522 3a223230 32342d31   ityTime":"2024-1
+0110: 312d3231 5431303a 35353a30 312e3636   1-21T10:55:01.66
+0120: 35333733 2d30363a 3030222c 22726571   5373-06:00","req
+0130: 4e665479 7065223a 22414d46 222c226e   NfType":"AMF","n
+0140: 72665375 70706f72 74656446 65617475   rfSupportedFeatu
+0150: 72657322 3a223122 7d                  res":"1"}
+0000: 00004a01 04000000 0fc1c0bf 0f0d0333   ..J............3
+0010: 33380f1f bd9d29ae e30c044e ae05c0b8   38....)....N....
+0020: 800b8eba ebac5555 92ad54b4 b1dc2c22   ......UU..T...,"
+0030: d8d04b0d 5a4c7a90 c08b2119 03e5586e   ..K.ZLz...!...Xn
+0040: b8059a09 6559e69a 69603a49 02418249   ....eY..i`:I.A.I
+0050: 1f27be                                .'.
+0000: 00015200 01000000 0f7b226e 66537461   ..R......{"nfSta
+0010: 7475734e 6f746966 69636174 696f6e55   tusNotificationU
+0020: 7269223a 22687474 703a2f2f 3132372e   ri":"http://127.
+0030: 302e302e 31303a37 3737372f 6e6e7266   0.0.10:7777/nnrf
+0040: 2d6e666d 2f76312f 6e662d73 74617475   -nfm/v1/nf-statu
+0050: 732d6e6f 74696679 222c2272 65714e66   s-notify","reqNf
+0060: 496e7374 616e6365 4964223a 22326564   InstanceId":"2ed
+0070: 61666563 322d6137 36302d34 3165662d   afec2-a760-41ef-
+0080: 38393334 2d306661 35653163 39666132   8934-0fa5e1c9fa2
+0090: 37222c22 73756273 6372436f 6e64223a   7","subscrCond":
+00a0: 7b227365 72766963 654e616d 65223a22   {"serviceName":"
+00b0: 6e6e7373 662d6e73 73656c65 6374696f   nnssf-nsselectio
+00c0: 6e227d2c 22737562 73637269 7074696f   n"},"subscriptio
+00d0: 6e496422 3a223265 64633330 39652d61   nId":"2edc309e-a
+00e0: 3736302d 34316566 2d383434 342d3037   760-41ef-8444-07
+00f0: 63643163 61306464 3963222c 2276616c   cd1ca0dd9c","val
+0100: 69646974 7954696d 65223a22 32303234   idityTime":"2024
+0110: 2d31312d 32315431 303a3535 3a30312e   -11-21T10:55:01.
+0120: 36363536 32352d30 363a3030 222c2272   665625-06:00","r
+0130: 65714e66 54797065 223a2241 4d46222c   eqNfType":"AMF",
+0140: 226e7266 53757070 6f727465 64466561   "nrfSupportedFea
+0150: 74757265 73223a22 31227d              tures":"1"}
+11/20 10:55:11.677: [sbi] DEBUG: STREAM added [17] (../lib/sbi/nghttp2-server.c:1558)
+11/20 10:55:11.677: [sbi] DEBUG: [PATCH] /nnrf-nfm/v1/nf-instances/2edafec2-a760-41ef-8934-0fa5e1c9fa27 (../lib/sbi/nghttp2-server.c:1173)
+11/20 10:55:11.677: [sbi] DEBUG: RECEIVED: 100 (../lib/sbi/nghttp2-server.c:1177)
+11/20 10:55:11.677: [sbi] DEBUG: [{"op":"replace","path":"/nfStatus","value":"REGISTERED"},{"op":"replace","path":"/load","value":0}] (../lib/sbi/nghttp2-server.c:1179)
+11/20 10:55:11.677: [nrf] DEBUG: nrf_state_operational(): OGS_EVENT_NAME_SBI_SERVER (../src/nrf/nrf-sm.c:53)
+[{"op":"replace","path":"/nfStatus","value":"REGISTERED"},{"op":"replace","path":"/load","value":0}]11/20 10:55:11.677: [nrf] DEBUG: nrf_nf_state_registered(): OGS_EVENT_NAME_SBI_SERVER (../src/nrf/nf-sm.c:195)
+11/20 10:55:11.677: [sbi] DEBUG: STATUS [204] (../lib/sbi/nghttp2-server.c:645)
+11/20 10:55:11.678: [sbi] DEBUG: STREAM closed [17] (../lib/sbi/nghttp2-server.c:1284)
+0000: 00001a01 05000000 1189c061 96e4593e   ...........a..Y>
+0010: 941014d2 7eea0802 6940b971 b6ee042a   ....~...i@.q...*
+0020: 62d1bf                                b..
+11/20 10:55:21.687: [sbi] DEBUG: STREAM added [19] (../lib/sbi/nghttp2-server.c:1558)
+11/20 10:55:21.687: [sbi] DEBUG: [PATCH] /nnrf-nfm/v1/nf-instances/2edafec2-a760-41ef-8934-0fa5e1c9fa27 (../lib/sbi/nghttp2-server.c:1173)
+11/20 10:55:21.687: [sbi] DEBUG: RECEIVED: 100 (../lib/sbi/nghttp2-server.c:1177)
+11/20 10:55:21.687: [sbi] DEBUG: [{"op":"replace","path":"/nfStatus","value":"REGISTERED"},{"op":"replace","path":"/load","value":0}] (../lib/sbi/nghttp2-server.c:1179)
+11/20 10:55:21.687: [nrf] DEBUG: nrf_state_operational(): OGS_EVENT_NAME_SBI_SERVER (../src/nrf/nrf-sm.c:53)
+[{"op":"replace","path":"/nfStatus","value":"REGISTERED"},{"op":"replace","path":"/load","value":0}]11/20 10:55:21.687: [nrf] DEBUG: nrf_nf_state_registered(): OGS_EVENT_NAME_SBI_SERVER (../src/nrf/nf-sm.c:195)
+11/20 10:55:21.687: [sbi] DEBUG: STATUS [204] (../lib/sbi/nghttp2-server.c:645)
+11/20 10:55:21.687: [sbi] DEBUG: STREAM closed [19] (../lib/sbi/nghttp2-server.c:1284)
+0000: 00001a01 05000000 1389c161 96e4593e   ...........a..Y>
+0010: 941014d2 7eea0802 6940b971 b6ee082a   ....~...i@.q...*
+0020: 62d1bf                                b..
+11/20 10:55:31.698: [sbi] DEBUG: STREAM added [21] (../lib/sbi/nghttp2-server.c:1558)
+11/20 10:55:31.698: [sbi] DEBUG: [PATCH] /nnrf-nfm/v1/nf-instances/2edafec2-a760-41ef-8934-0fa5e1c9fa27 (../lib/sbi/nghttp2-server.c:1173)
+11/20 10:55:31.698: [sbi] DEBUG: RECEIVED: 100 (../lib/sbi/nghttp2-server.c:1177)
+11/20 10:55:31.698: [sbi] DEBUG: [{"op":"replace","path":"/nfStatus","value":"REGISTERED"},{"op":"replace","path":"/load","value":0}] (../lib/sbi/nghttp2-server.c:1179)
+11/20 10:55:31.698: [nrf] DEBUG: nrf_state_operational(): OGS_EVENT_NAME_SBI_SERVER (../src/nrf/nrf-sm.c:53)
+[{"op":"replace","path":"/nfStatus","value":"REGISTERED"},{"op":"replace","path":"/load","value":0}]11/20 10:55:31.698: [nrf] DEBUG: nrf_nf_state_registered(): OGS_EVENT_NAME_SBI_SERVER (../src/nrf/nf-sm.c:195)
+11/20 10:55:31.698: [sbi] DEBUG: STATUS [204] (../lib/sbi/nghttp2-server.c:645)
+11/20 10:55:31.698: [sbi] DEBUG: STREAM closed [21] (../lib/sbi/nghttp2-server.c:1284)
+0000: 00001a01 05000000 1589c261 96e4593e   ...........a..Y>
+0010: 941014d2 7eea0802 6940b971 b6ee3215   ....~...i@.q..2.
+0020: 3168df                                1h.
+11/20 10:55:41.709: [sbi] DEBUG: STREAM added [23] (../lib/sbi/nghttp2-server.c:1558)
+11/20 10:55:41.709: [sbi] DEBUG: [PATCH] /nnrf-nfm/v1/nf-instances/2edafec2-a760-41ef-8934-0fa5e1c9fa27 (../lib/sbi/nghttp2-server.c:1173)
+11/20 10:55:41.709: [sbi] DEBUG: RECEIVED: 100 (../lib/sbi/nghttp2-server.c:1177)
+11/20 10:55:41.709: [sbi] DEBUG: [{"op":"replace","path":"/nfStatus","value":"REGISTERED"},{"op":"replace","path":"/load","value":0}] (../lib/sbi/nghttp2-server.c:1179)
+11/20 10:55:41.709: [nrf] DEBUG: nrf_state_operational(): OGS_EVENT_NAME_SBI_SERVER (../src/nrf/nrf-sm.c:53)
+[{"op":"replace","path":"/nfStatus","value":"REGISTERED"},{"op":"replace","path":"/load","value":0}]11/20 10:55:41.709: [nrf] DEBUG: nrf_nf_state_registered(): OGS_EVENT_NAME_SBI_SERVER (../src/nrf/nf-sm.c:195)
+11/20 10:55:41.709: [sbi] DEBUG: STATUS [204] (../lib/sbi/nghttp2-server.c:645)
+11/20 10:55:41.709: [sbi] DEBUG: STREAM closed [23] (../lib/sbi/nghttp2-server.c:1284)
+0000: 00001a01 05000000 1789c361 96e4593e   ...........a..Y>
+0010: 941014d2 7eea0802 6940b971 b6ee3415   ....~...i@.q..4.
+0020: 3168df                                1h.
+11/20 10:55:50.243: [sbi] DEBUG: STREAM added [25] (../lib/sbi/nghttp2-server.c:1558)
+11/20 10:55:50.243: [sbi] DEBUG: [DELETE] /nnrf-nfm/v1/nf-instances/2edafec2-a760-41ef-8934-0fa5e1c9fa27 (../lib/sbi/nghttp2-server.c:1173)
+11/20 10:55:50.243: [nrf] DEBUG: nrf_state_operational(): OGS_EVENT_NAME_SBI_SERVER (../src/nrf/nrf-sm.c:53)
+11/20 10:55:50.243: [nrf] DEBUG: nrf_nf_state_registered(): OGS_EVENT_NAME_SBI_SERVER (../src/nrf/nf-sm.c:195)
+11/20 10:55:50.243: [sbi] DEBUG: STATUS [204] (../lib/sbi/nghttp2-server.c:645)
+11/20 10:55:50.243: [sbi] DEBUG: STREAM closed [25] (../lib/sbi/nghttp2-server.c:1284)
+11/20 10:55:50.243: [nrf] DEBUG: nrf_nf_state_registered(): EXIT (../src/nrf/nf-sm.c:195)
+11/20 10:55:50.243: [nrf] INFO: [2edafec2-a760-41ef-8934-0fa5e1c9fa27] NF de-registered (../src/nrf/nf-sm.c:218)
+11/20 10:55:50.243: [nrf] DEBUG: nrf_nf_state_de_registered(): ENTRY (../src/nrf/nf-sm.c:324)
+11/20 10:55:50.243: [nrf] INFO: [2edafec2-a760-41ef-8934-0fa5e1c9fa27] NF de-registered (../src/nrf/nrf-sm.c:176)
+11/20 10:55:50.243: [nrf] DEBUG: nrf_nf_state_de_registered(): EXIT (../src/nrf/nf-sm.c:324)
+11/20 10:55:50.243: [nrf] DEBUG: nrf_nf_state_final(): EXIT (../src/nrf/nf-sm.c:74)
+11/20 10:55:50.243: [sbi] DEBUG: [AMF] NFInstance removed [2edafec2-a760-41ef-8934-0fa5e1c9fa27] (../lib/sbi/context.c:1201)
+11/20 10:55:50.243: [sbi] DEBUG: CLEINT UnRef [9] (../lib/sbi/client.c:178)
+11/20 10:55:50.243: [sbi] DEBUG: - addr [127.0.0.10:7777] (../lib/sbi/client.c:184)
+11/20 10:55:50.243: [sbi] DEBUG: [UNREF] 9 (../lib/sbi/client.c:192)
+11/20 10:55:50.243: [sbi] DEBUG: CLEINT UnRef [8] (../lib/sbi/client.c:178)
+11/20 10:55:50.243: [sbi] DEBUG: - addr [127.0.0.10:7777] (../lib/sbi/client.c:184)
+11/20 10:55:50.243: [sbi] DEBUG: [UNREF] 8 (../lib/sbi/client.c:192)
+11/20 10:55:50.243: [sbi] DEBUG: CLEINT UnRef [7] (../lib/sbi/client.c:178)
+11/20 10:55:50.243: [sbi] DEBUG: - addr [127.0.0.10:7777] (../lib/sbi/client.c:184)
+11/20 10:55:50.243: [sbi] DEBUG: [UNREF] 7 (../lib/sbi/client.c:192)
+11/20 10:55:50.243: [sbi] DEBUG: CLEINT UnRef [6] (../lib/sbi/client.c:178)
+11/20 10:55:50.243: [sbi] DEBUG: - addr [127.0.0.10:7777] (../lib/sbi/client.c:184)
+11/20 10:55:50.243: [sbi] DEBUG: [UNREF] 6 (../lib/sbi/client.c:192)
+11/20 10:55:50.243: [sbi] DEBUG: CLEINT UnRef [5] (../lib/sbi/client.c:178)
+11/20 10:55:50.243: [sbi] DEBUG: - addr [127.0.0.10:7777] (../lib/sbi/client.c:184)
+11/20 10:55:50.243: [sbi] DEBUG: [UNREF] 5 (../lib/sbi/client.c:192)
+11/20 10:55:50.243: [sbi] DEBUG: CLEINT UnRef [4] (../lib/sbi/client.c:178)
+11/20 10:55:50.243: [sbi] DEBUG: - addr [127.0.0.10:7777] (../lib/sbi/client.c:184)
+11/20 10:55:50.243: [sbi] DEBUG: [UNREF] 4 (../lib/sbi/client.c:192)
+11/20 10:55:50.243: [sbi] DEBUG: CLEINT UnRef [3] (../lib/sbi/client.c:178)
+11/20 10:55:50.243: [sbi] DEBUG: - addr [127.0.0.10:7777] (../lib/sbi/client.c:184)
+11/20 10:55:50.243: [sbi] DEBUG: [UNREF] 3 (../lib/sbi/client.c:192)
+11/20 10:55:50.243: [sbi] DEBUG: CLEINT UnRef [2] (../lib/sbi/client.c:178)
+11/20 10:55:50.243: [sbi] DEBUG: - addr [127.0.0.10:7777] (../lib/sbi/client.c:184)
+11/20 10:55:50.243: [sbi] DEBUG: [UNREF] 2 (../lib/sbi/client.c:192)
+11/20 10:55:50.243: [sbi] DEBUG: CLEINT UnRef [2] (../lib/sbi/client.c:178)
+11/20 10:55:50.243: [sbi] DEBUG: - addr [127.0.0.10:80] (../lib/sbi/client.c:184)
+11/20 10:55:50.243: [sbi] DEBUG: [UNREF] 2 (../lib/sbi/client.c:192)
+0000: 00001a01 05000000 1989c461 96e4593e   ...........a..Y>
+0010: 941014d2 7eea0802 6940b971 b6ee3605   ....~...i@.q..6.
+0020: 3168df                                1h.
+11/20 10:55:50.244: [sbi] INFO: RST_STREAM received: stream_id=25 (../lib/sbi/nghttp2-server.c:1246)
+11/20 10:55:51.489: [app] INFO: SIGINT received (../src/main.c:54)
+11/20 10:55:51.489: [app] INFO: Open5GS daemon terminating... (../src/main.c:235)
+11/20 10:55:51.489: [event] DEBUG: interrupt all (../lib/core/ogs-queue.c:284)
+11/20 10:55:51.489: [thread] DEBUG: [0x6256810a76f0] thread running(1) (../lib/core/ogs-thread.c:114)
+11/20 10:55:51.490: [nrf] DEBUG: nrf_state_operational(): EXIT (../src/nrf/nrf-sm.c:53)
+11/20 10:55:51.490: [nrf] DEBUG: nrf_state_final(): INIT (../src/nrf/nrf-sm.c:34)
+11/20 10:55:51.490: [thread] DEBUG: [0x6256810a76f0] worker done (../lib/core/ogs-thread.c:72)
+11/20 10:55:51.491: [thread] DEBUG: [0x6256810a76f0] thread destroy (../lib/core/ogs-thread.c:126)
+11/20 10:55:51.491: [thread] DEBUG: [0x6256810a76f0] thread join (../lib/core/ogs-thread.c:135)
+11/20 10:55:51.491: [thread] DEBUG: [0x6256810a76f0] thread done (../lib/core/ogs-thread.c:141)
+11/20 10:55:51.492: [sbi] DEBUG: [NRF] NFInstance removed [2d5f543a-a760-41ef-8444-07cd1ca0dd9c] (../lib/sbi/context.c:1201)
+11/20 10:55:51.492: [sbi] DEBUG: CLEINT UnRef [1] (../lib/sbi/client.c:178)
+11/20 10:55:51.492: [sbi] DEBUG: - addr [127.0.0.10:80] (../lib/sbi/client.c:184)
+11/20 10:55:51.492: [sbi] DEBUG: CLEINT removed [1] (../lib/sbi/client.c:196)
+11/20 10:55:51.492: [sbi] DEBUG: CLEINT UnRef [1] (../lib/sbi/client.c:178)
+11/20 10:55:51.492: [sbi] DEBUG: - addr [127.0.0.10:7777] (../lib/sbi/client.c:184)
+11/20 10:55:51.492: [sbi] DEBUG: CLEINT removed [1] (../lib/sbi/client.c:196)
+11/20 10:55:51.495: [app] INFO: NRF terminate...done (../src/nrf/app.c:39)
